@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node ./dev/index.ts "
+  },
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1"
+  }
+}
