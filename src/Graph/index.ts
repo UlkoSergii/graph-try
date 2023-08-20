@@ -1,6 +1,4 @@
-export interface Vertex {
-  name: string;
-}
+import { Vertex } from "../Vertex";
 
 export type Edge = [Vertex, Vertex];
 export type Edges = Array<Edge>;
@@ -31,6 +29,11 @@ export class GraphCommon {
     ).length;
   }
 
+  countDegreeByLinks(vertex: Vertex) {
+    return this._edges.filter(([v1, v2]) => v1 === vertex || v2 === vertex)
+      .length;
+  }
+
   get name() {
     return this._name;
   }
@@ -40,4 +43,8 @@ export class GraphCommon {
   }
 }
 
-export class Graph extends GraphCommon {}
+export class Graph extends GraphCommon {
+  constructor(config: GraphConfig) {
+    super(config);
+  }
+}
