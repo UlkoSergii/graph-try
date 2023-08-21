@@ -1,2 +1,3 @@
 export { Vertex } from "./Vertex";
-export { Graph, GraphConfig } from "./Graph";
+export { Edge } from "./Edge";
+export { Graph, GraphWithVerticesAndEdgesConfig } from "./Graph";
